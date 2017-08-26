@@ -2,7 +2,7 @@ body {
   font-family: 'PT Sans', 'Arial', sans-serif;
   font-size: 14px;
   line-height: 26px;
-  color: rgb(51, 51, 51);
+  color: #333333;
 }
 
 .header-list-item {
@@ -11,7 +11,7 @@ body {
   margin-left: 73px;
   margin-right: 73px;
   font-weight: bold;
-  color: rgb(0, 0, 0);
+  color: #000000;
 }
 
 .visually-hidden {
@@ -44,7 +44,7 @@ body {
 .description-caption {
   font-weight: bold;
   font-size: 21px;
-  color: rgb(0, 0, 0);
+  color: #000000;
 }
 
 .card-item {
@@ -52,7 +52,7 @@ body {
 }
 
 .card-with-photo {
-  color: rgb(255, 255, 255);
+  color: #ffffff;
 }
 
 .card-header {
@@ -64,7 +64,7 @@ body {
   font-weight: bold;
   font-size: 21px;
   line-height: 21px;
-  color: rgb(0, 0, 0);
+  color: #000000;
 }
 
 .feature-text {
@@ -75,7 +75,7 @@ body {
   font-weight: bold;
   font-size: 30px;
   line-height: 36px;
-  color: rgb(0, 0, 0);
+  color: #000000;
 }
 
 .search-hotel-text {
@@ -85,32 +85,32 @@ body {
 .search-hotel-header {
   font-weight: bold;
   font-size: 21px;
-  color: rgb(255, 255, 255);
+  color: #ffffff;
 }
 
 .form-search {
   font-weight: bold;
-  color: rgb(0, 0, 0);
+  color: #000000;
 }
 
 .search-button {
   font-weight: bold;
   font-size: 21px;
-  color: rgb(255, 255, 255);
+  color: #ffffff;
 }
 
 .hashtag {
   font-weight: bold;
   font-size: 21px;
-  color: rgb(0, 0, 0);
+  color: #000000;
 }
 
 .footer-copyright {
-  color: rgb(0, 0, 0);
+  color: #000000;
 }
 
 .filter {
-  color: rgb(255, 255, 255);
+  color: #ffffff;
 }
 
 .checkbox-field {
@@ -130,7 +130,7 @@ body {
 .search-result {
   font-weight: bold;
   font-size: 21px;
-  color: rgb(0, 0, 0);
+  color: #000000;
 }
 
 .sorting {
@@ -139,15 +139,15 @@ body {
 }
 
 .sorting-header {
-  color: rgb(0, 0, 0);
+  color: #000000;
 }
 
 .sorting-list-item {
-  color: rgb(0, 0, 0);
+  color: #000000;
 }
 
-.sorting-list-item-current {  /*Не слишком длиный класс?*/
-  color: rgb(129, 179, 210);
+.sorting-item-current {
+  color: #81b3d2;
   }
 
 .catalog {
@@ -156,17 +156,17 @@ body {
 
 .name-item {
   font-weight: bold;
-  color: rgb(0, 0, 0);
+  color: #000000;
   font-size: 21px;
   line-height: 26px;
 }
 
 .catalog-button {
-  color: rgb(255, 255, 255);
+  color: #ffffff;
 }
 
 .rating-number {
-  color: rgb(102, 102, 102);
+  color: #666666;
 }
 
 .feature-list-item::before {
