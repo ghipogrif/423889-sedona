@@ -10,15 +10,19 @@ body {
   margin-bottom: 22px;
   margin-left: 73px;
   margin-right: 73px;
-}
-
-.header {
   font-weight: bold;
   color: rgb(0, 0, 0);
 }
 
 .visually-hidden {
-  display: none;  /**Не мешает алгоритму поиска google?**/
+	position: absolute;
+	overflow: hidden;
+	clip: rect(0 0 0 0);
+	height: 1px;
+	width: 1px;
+	margin: -1px;
+	padding: 0;
+	border: 0;
 }
 
 /*.background::before {
@@ -175,14 +179,12 @@ body {
 }
 
 .feature-list-item:nth-child(2)::before {
-  content: "";
   background: url(../img/svg/icon-3.svg);
   width: 74px;
   height: 70px;
 }
 
 .feature-list-item:nth-child(3)::before {
-  content: "";
   background: url(../img/svg/icon-2.svg);
   width: 64px;
   height: 76px;
