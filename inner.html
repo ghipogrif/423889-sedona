@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>HTML Academy: Седона</title>
+    <link href="css/style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container">
+      <header class="main-header">
+        <nav class="main-navigation">
+          <a class="main-header-logo">
+            <img src="img/logo.png" width="138" height="70" alt="Седона">
+          </a>            <!--Размеры, текст-->
+          <ul class="list">
+            <li class="header-list-item">
+              <a href="#">Информация</a>
+            </li>
+            <li class="header-list-item">
+              <a href="#">Фото и видео</a>
+            </li>
+            <li class="header-list-item">
+              <a href="#">Карта штата</a>
+            </li>
+            <li class="header-list-item">
+              <a href="#">Гостиницы</a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+
+
+      <main class="container">
+        <section class="filters">
+          <h2 class="option-header">Фильтр жилья</h2>
+          <form action="" method="post">                 <!-- ФОН -->
+            <div class="checkbox-field">
+              <p class="option-header">Инфраструктура</p>
+              <div>
+                <input type="checkbox" name="pool" id="pool-field" checked>
+                <label for="pool-field">Бассейн</label>
+              </div>
+              <div>
+                <input type="checkbox" name="parking" id="parking-field">
+                <label for="parking-field">Парковка</label>
+              </div>
+              <div>
+                <input type="checkbox" name="wi-fi" id="wifi-field">
+                <label for="wifi-field">Wi-fi</label>
+              </div>
+            </div>
+
+            <div class="checkbox-field">
+              <p class="option-header">Тип жилья:</p>
+              <div>
+                <input type="checkbox" name="hotel" id="hotel-field" checked>
+                <label for="hotel-field">Гостиница</label>
+              </div>
+              <div>
+                <input type="checkbox" name="motel" id="motel-field" checked>
+                <label for="motel-field">Мотел</label>
+              </div>
+              <div>
+                <input type="checkbox" name="apartments" id="apartments-field" checked>
+                <label for="apartments-field">Апартаменты</label>
+              </div>
+            </div>
+            <div class="cost-field">
+              <p class="option-header">Стоимость в сутки (Р):</p>
+              <div>
+                <div>
+                  <label for="">От</label>
+                  <input type="text" name="" value="" id="">
+                </div>
+                <div>
+                  <label for="">До</label>
+                  <input type="text" name="" value="" id="">
+                </div>
+              </div>
+              <input class="show-button" type="submit" value="Показать">
+            </div>
+          </form>
+        </section>
+        <div class="">          <!--КЛасс-->
+          <div class="search-result">
+            Найдено: 3
+          </div>
+          <div class="sorting">
+            <p class="sorting-header">Сортировка:</p>
+            <ul class="sorting-list">
+              <li class="sorting-list-item sorting-list-item-current">
+                <a href="#">По цене</a>
+              </li>
+              <li class="sorting-list-item">
+                <a href="#">По типу</a>
+              </li>
+              <li class="sorting-list-item">
+                <a href="#">По рейтингу</a>
+              </li>
+            </ul>
+          </div>
+          <div class="direction">
+            <ul class="direction-list">
+              <li class="direction-item">
+                <a class="direction-down" href="#">
+                  <img src="img/svg/icon-up-dir.svg">Вверх
+                </a>
+              </li>
+              <li class="direction-item">
+                <a class="direction-up" href="#">
+                  <img src="img/svg/icon-down-dir.svg">Вниз
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <section class="catalog">
+          <h2 class="visually-hidden">Результаты поиска</h2>
+          <ul class="catalog-list">
+            <li class="catalog-item">
+              <div class="catalog-item-image">
+                <img src="img/catalog-item-first.jpg" width="135" height="90" alt="Amara Resort & Spa">
+              </div>
+              <div class="catalog-item-description">
+                <h3 class="name-item">
+                  <a href="#">Amara Resort & Spa</a>
+                </h3>
+                <div>
+                  <b class="price-and-londing">Гостиница</b>
+                  <a class="catalog-button" href="#">Подробнее</a>
+                </div>
+                <div>
+                  <b class="price-and-londing">От 3500 Р.</b>
+                  <a class="catalog-button" href="#">Забронировать</a>
+                </div>
+              </div>
+              <div class="rating">
+                <div class="rating-number">
+                  Рейтинг: 8,5
+                </div>
+              </div>
+            </li>
+            <li class="catalog-item">
+              <div class="catalog-item-image">
+                <img src="img/catalog-item-second.jpg" width="135" height="90" alt="Desert Quail Inn">
+              </div>
+              <div class="catalog-item-description">
+                <h3 class="name-item">
+                  <a href="#">Desert Quail Inn</a>
+                </h3>
+                <div>
+                  <b class="price-and-londing">Мотель</b>
+                  <a class="catalog-button" href="#">Подробнее</a>
+                </div>
+                <div>
+                  <b class="price-and-londing">От 2000 Р.</b>
+                  <a class="catalog-button" href="#">Забронировать</a>
+                </div>
+              </div>
+              <div class="rating">
+                <div class="rating-number">
+                  Рейтинг: 8,9
+                </div>
+              </div>
+            </li>
+            <li class="catalog-item">
+              <div class="catalog-item-image">
+                <img src="img/catalog-item-third.jpg" width="135" height="90" alt="Villas at poco diablo">
+              </div>
+              <div class="catalog-item-description">
+                <h3 class="name-item">
+                  <a href="#">Villas at poco diablo</a>
+                </h3>
+                <div>
+                  <b class="price-and-londing">Апартаменты</b>
+                  <a class="catalog-button" href="#">Подробнее</a>
+                </div>
+                <div>
+                  <b class="price-and-londing">От 4000 Р.</b>
+                  <a class="catalog-button" href="#">Забронировать</a>
+                </div>
+              </div>
+              <div class="rating">
+                <div class="rating-number">
+                  Рейтинг: 9,2
+                </div>
+              </div>
+            </li>
+          </ul>
+        </section>
+      </main>
+
+      <footer>
+        <div class="hashtag">#visitsedona</div>
+        <div class="footer-social">
+          <ul>
+            <li>
+              <a class="social-button" href="#">
+                <img src="img/svg/twitter.svg">Твитер
+              </a>
+            </li>
+            <li>
+              <a class="social-button" href="#">
+                <img src="img/svg/fb-icon.svg">Фэйсбук
+              </a>
+            </li>
+            <li>
+              <a class="social-button" href="#">
+                <img src="img/svg/youtube.svg">Ютуб
+              </a>
+            </li>
+          </ul>
+          <div>
+            <p class="footer-copyright">
+            Website by
+            <a href="https://htmlacademy.ru/intensive/htmlcss">
+              <img src="img/svg/logo-htmlacademy.svg" alt="htmlacademy" width="115px" height="41px">
+            </a>
+          </p>
+        </div>
+      </div>
+    </footer>
+    </div>
+  </body>
+</html>
