@@ -534,7 +534,6 @@ b.card-number {
     fill: #c1bfc0;
 }
 
-
 .footer-social {
   width: 400px;
   text-align: center;
@@ -559,8 +558,8 @@ b.card-number {
 }
 
 .cost-field {
-  line-height: 21px;
   width: 528px;
+  line-height: 21px;
 }
 
 .settings {
