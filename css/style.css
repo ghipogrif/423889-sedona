@@ -18,6 +18,8 @@ a {
 }
 
 img {
+  max-width: 100%;
+  height: auto;
   display: block;
 }
 
@@ -31,6 +33,8 @@ ul.catalog-list {
 footer {
   display: flex;
   align-items: center;
+  padding-top: 34px;
+  padding-bottom: 34px;
 }
 
 .footer-list {
@@ -38,13 +42,6 @@ footer {
   display: flex;
   padding: 0;
   margin: 0;
-  padding-top: 36px;
-  padding-bottom: 36px;
-}
-
-.twiter-social,
-.facebook-social {
-  margin-right: 6px;
 }
 
 .container {
@@ -126,7 +123,21 @@ ul.sorting-list {
 
 .number-of-people {
   display: flex;
-  margin-left: 54px;
+}
+
+.number-of-adults,
+.number-of-children {
+  display: flex;
+  margin: 0px;
+  align-items: center;
+}
+
+.number-of-children {
+  margin-left: 53px;
+}
+
+.number-of-children label {
+  margin-right: 27px;
 }
 
 .number-of-adults input,
@@ -134,15 +145,6 @@ ul.sorting-list {
 .number-of-adults button,
 .number-of-children button {
   width: 38px;
-}
-
-.number-of-adults label {
-  margin-right: 41px;
-}
-
-.number-of-children label {
-  padding-left: 53px;
-  padding-right: 27px;
 }
 
 /* ---- Флексы  ---- */
@@ -165,12 +167,9 @@ ul.sorting-list {
   display: flex;
   margin: 0;
   padding: 0;
-  padding-right: 72px;
 }
 
-.background-image::before {
-  content: "";
-
+.background-image {
   display: block;
   width: 1200px;
   height: 508px;
@@ -178,12 +177,14 @@ ul.sorting-list {
   background-image: url(../img/background-index.jpg);
   background-repeat: no-repeat;
 
+  position: relative;
   z-index: -2;
-  background-position: 0 10
+  background-position: 0px -56px;
 }
 
 .background-image::after {
   content: "";
+  display: block;
 
   width: 1200px;
   height: 57px;
@@ -192,7 +193,8 @@ ul.sorting-list {
   background-repeat: no-repeat;
 
   position: absolute;
-  top: 507px;
+  z-index: 1;
+  bottom: 0px;
 }
 
 .direction {
@@ -241,14 +243,7 @@ a.direction-link {
 }
 
 .main-header-logo {
-  width: 138px;
-  height: 70px;
-
-  left: 531px;
-  top: 0px;
-}
-
-.main-header-logo img {
+  display: block;
   width: 138px;
   height: 70px;
 
@@ -257,13 +252,14 @@ a.direction-link {
   top: 0px;
 }
 
+.main-header-logo img {
+  width: 138px;
+  height: 70px;
+}
+
 .list a,
 .name-item a {
   color: #000000;
-}
-
-a.search-hotel-header {
-  color: #ffffff;
 }
 
 .catalog-column-item:nth-child(1) {
@@ -299,16 +295,19 @@ a.search-hotel-header:active {
 
 .current-list-item a,
 .current-list-item a:active,
-.current-list-item a:hover {
+.current-list-item a:hover,
+.current-list-item a:focus {
   color: #766357;
 }
 
 .map {
   width: 1200px;
-  height: 573px;
+  height: 473px;
 
   background-image: url(../img/map.png);
   background-repeat: no-repeat;
+
+  background-position: 0px -1px;
 }
 
 /*.background::before {
@@ -332,7 +331,7 @@ a.search-hotel-header:active {
 
 h2.description-caption {
   display: block;
-  width: 440px;
+  width: 445px;
   text-align: center;
   font-weight: bold;
   font-size: 21px;
@@ -444,6 +443,7 @@ b.card-number {
 
 .search-hotel {
   padding-top: 50px;
+  position: relative;
 }
 
 .search-hotel-text {
@@ -457,7 +457,19 @@ b.card-number {
 }
 
 p.search-hotel-field {
+  display: flex;
   margin: 0;
+  position: relative;
+  align-items: center;
+
+}
+
+.search-hotel-field:first-child {
+  margin-bottom: 29px;
+}
+
+.search-hotel-field label {
+  margin-right: auto;
 }
 
 a.search-hotel-header {
@@ -482,21 +494,40 @@ a.search-hotel-header:active {
 }
 
 .form-search {
-  width: 568px;
+  box-sizing: border-box;
+  display: block;
+
   font-weight: bold;
   color: #000000;
-  margin-left: 316px;
-  margin-right: 316px;
-}
+  background-color: #ffffff;
 
-.date {
-  margin: 69px 21px 55px 55px;
+  width: 568px;
+  padding: 55px;
+  position: absolute;
+  left: 316px;
+  top: 291px;
 }
 
 .input-search-decoration {
+  box-sizing: border-box;
   width: 346px;
-  background-color: #f2f2f2;
+  min-height: 38px;
+
+  font-family: inherit;
   font-weight: bold;
+  text-transform: uppercase;
+  background-color: #f2f2f2;
+
+  border: 0;
+  padding: 0;
+}
+
+.search-hotel-field input[type="text"] {
+  padding: 8px 50px 8px 12px;
+}
+
+.number-of-people input {
+  text-align: center;
 }
 
 .input-search-decoration :hover {
@@ -508,10 +539,27 @@ a.search-hotel-header:active {
 }
 
 .button-step {
-  color: #a9a9a9;
 
-  background-color: transparent;
+
+  color: #a9a9a9;
+  width: 38px;
+  height: 38px;
+
+  background-color: #f2f2f2;
+  padding: 0px;
 }
+/*
+.number-of-adults .button-step-bottom {
+  position: absolute;
+  left: 112px;
+}
+
+.number-of-adults .button-step-top {
+  position: absolute;
+  left: 188.8px;
+  top: 0px;
+} */
+
 
 .button-step:focus,
 .button-step:hover {
@@ -523,9 +571,15 @@ a.search-hotel-header:active {
 }
 
 .calendar-button {
-  fill: #a9a9a9;
+  padding: 0px;
 
+  fill: #a9a9a9;
   background-color: transparent;
+
+  position: absolute;
+  top: 8px;
+  left: 428px;
+  z-index: 3;
 }
 
 .calendar-button:focus,
@@ -537,13 +591,32 @@ a.search-hotel-header:active {
   fill: #81b3d2;
 }
 
+.number-of-adults label {
+  margin-right: 41px;
+}
+
+.search-hotel-field:nth-child(2) {
+  margin-bottom: 30px;
+}
+
 .search-button input {
-  width: 468px;
-  background-color: #81b3d2;
-  padding: 17px 197px 22px 195px;
-  margin: 54px 55px 55px; ;
+  font-family: inherit;
   font-size: 21px;
+  line-height: 26px;
+  font-weight: bold;
+  text-transform: inherit;
+
+  width: 458px;
+  border: 0px;
+  padding: 16px 197px 16px 195px;
+
+  background-color: #81b3d2;
   color: #ffffff;
+}
+
+p.search-button {
+  margin: 0px;
+  margin-top: 54px;
 }
 
 .hashtag {
@@ -608,7 +681,6 @@ a.search-hotel-header:active {
   font-size: 16px;
   line-height: 21px;
 
-  width: 183px;
   margin: 0;
   margin-bottom: 25px;
 }
@@ -632,10 +704,10 @@ a.search-hotel-header:active {
   padding-left: 6%;
 }
 
-
 .cost-field {
-  width: 528px;
   line-height: 21px;
+  margin-left: auto;
+  padding-right: 6%;
 }
 
 .settings {
@@ -644,6 +716,7 @@ a.search-hotel-header:active {
   padding-top: 30px;
   padding-bottom: 30px;
   align-items: center;
+  padding-right: 6%;
 }
 
 .cost-field input:nth-child(1) {
@@ -661,19 +734,22 @@ a.search-hotel-header:active {
 
 .range {
   display: flex;
-  width:318px;
-  padding-left: 210px
+}
+
+.cost-field input[type="text"] {
+  width: 40px;
 }
 
 input.show-button {
   line-height: 21px;
   color: #ffffff;
   background: transparent;
+  text-align: center;
+  font-weight: normal;
 
-  padding: 11px 32px 8px;
-  border: 3px solid #ffffff;
-  margin-right: 95px;
-  margin-left: 232px;
+  padding: 6px 34px 5px 33px;
+  margin-top: 50px;
+  border: 2px solid #ffffff;
 
 }
 
@@ -714,9 +790,7 @@ input.show-button:hover {
   border-bottom: 1px dashed #81b3d2;
 }
 
-.sorting-list-item:nth-child(2) a:active,
-.sorting-list-item:nth-child(3) a:active,
-.list a:active {
+.list a:not(.sorting-list-item:last-child):active {
   color: #b2b2b2;
 }
 
@@ -733,7 +807,8 @@ input.show-button:hover {
   display: flex;
   border-bottom: 1px solid #e5e5e5;
   padding-top: 25px;
-  padding-bottom: 30px;
+  padding-bottom: 29px;
+  padding-right: 6%;
 }
 
 .catalog-item-image {
@@ -804,40 +879,34 @@ input.show-button:hover {
 
 /*Социальные сети */
 
-
-  .social-button {
+.footer-list-item {
   display: block;
+  width: 46px;
+  height: 48px;
   background-color: #81b3d2;
 }
 
-.social-button:focus,
-.social-button:hover {
+.social-button {
+  display: flex;
+  width: 46px;
+  height: 48px;
+  justify-content: space-around;
+  align-items: center;
+
+}
+
+.twiter-social,
+.facebook-social {
+  margin-right: 6px;
+}
+
+.footer-list-item:focus,
+.footer-list-item:hover {
   background-color: #669ec0;
 }
 
-.social-button:active {
+.footer-list-item:active {
   background-color: #5496bd;
-}
-
-.social-button:nth-child(1) {
-  width: 17px;
-  height: 15px;
-  padding: 17px 14px 16px 15px;
-}
-
-.social-button:nth-child(2) {
-  width: 12px;
-  height: 22px;
-  padding-top: 12px;
-  padding-right: 18px;
-  padding-bottom: 14px;
-  padding-left: 16px;
-}
-
-.social-button:nth-child(3) {
-  width: 20px;
-  height: 16px;
-  padding: 16px 13px;
 }
 
 .svg-social {
@@ -871,10 +940,33 @@ a.social-button:active path,
 }
 
 .rating {
+  margin-left: auto;
+}
+
+.rating-star{
+  display: flex;
+  margin-top: 5px;
+}
+
+.star-item {
+  margin-right: 6px;
+}
+
+.star-item:first-child {
+  margin-left: auto;
+}
+
+.star-item:last-child {
+  margin-right: 0px;
+}
+
+
+.rating-number {
   color: #666666;
   margin-left: auto;
   background-color: #f2f2f2;
-  padding: 5px 13px 7px 16px;
+  padding: 3px 12px 4px 15px;
+  margin-top: 40px;
 }
 
 .feature-list-item:nth-child(1) {
