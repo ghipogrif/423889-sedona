@@ -96,7 +96,7 @@ img {
   text-align: right
 }
 
-.list a:not(.sorting-list-item:last-child):active {
+.list a:active {
   color: #b2b2b2
 }
 
@@ -104,10 +104,6 @@ img {
   width: 20%;
   font-weight: 700;
   color: #000
-}
-
-.header-list-item a {
-  font-family: "PT Sans",sans-serif
 }
 
 .header-list-item a:hover,.name-item a:hover,.sorting-list-item a:hover {
@@ -137,7 +133,7 @@ img {
 }
 
 .background-image::after {
-  content: "";
+  content: '';
   position: absolute;
   z-index: 1;
   bottom: 0;
@@ -150,7 +146,7 @@ img {
   padding-bottom: 37px
 }
 
-h2.description-caption {
+.description-caption {
   display: block;
   width: 445px;
   margin: 0 auto;
@@ -218,9 +214,9 @@ b.card-number {
 }
 
 .card-text-img {
-  -webkit-box-ordinal-group: 0;
-  -ms-flex-order: -1;
-  order: -1
+  -webkit-box-ordinal-group: 3;
+  -ms-flex-order: 2;
+  order: 2
 }
 
 .card-second h2 {
@@ -231,11 +227,11 @@ b.card-number {
   width: 110px
 }
 
-.card-item h2,li.card-item h2 {
+.card-item h2,.card-list-header {
   margin: 0 auto 24px
 }
 
-li.card-item h2 {
+.card-list-header {
   color: #000
 }
 
@@ -298,7 +294,7 @@ ul.feature-list,ul.sorting-list {
 }
 
 .feature-list-item::before {
-  content: "";
+  content: '';
   display: block;
   margin: 0 auto
 }
@@ -313,9 +309,7 @@ ul.feature-list,ul.sorting-list {
 .feature-list-item:nth-child(2)::before {
   width: 74px;
   height: 70px;
-  margin-bottom: 30px;
-  margin-left: 158px;
-  margin-right: auto;
+  margin: 0 auto 30px;
   background: url(../img/svg/icon-3.svg);
   background-repeat: no-repeat
 }
@@ -353,7 +347,7 @@ ul.feature-list,ul.sorting-list {
   line-height: 24px
 }
 
-a.search-hotel-header {
+.search-hotel-header {
   display: block;
   width: 568px;
   padding: 30px 0 31px;
@@ -365,11 +359,11 @@ a.search-hotel-header {
   background-color: #766357
 }
 
-a.search-hotel-header:hover {
+.search-hotel-header:hover {
   background-color: #604e43
 }
 
-a.search-hotel-header:active {
+.search-hotel-header:active {
   background-color: #503e33
 }
 
@@ -398,7 +392,7 @@ a.search-hotel-header:active {
   box-shadow: 0 5px 20px -5px rgba(50,50,50,.5)
 }
 
-p.search-hotel-field {
+.search-hotel-field {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -438,11 +432,11 @@ p.search-hotel-field {
   background-color: #f2f2f2
 }
 
-.input-search-decoration :hover {
+.input-search-decoration:hover {
   background-color: #ebebeb
 }
 
-.input-search-decoration :focus {
+.input-search-decoration:focus {
   background-color: #fff
 }
 
@@ -548,7 +542,6 @@ p.search-button {
 }
 
 .map {
-  width: 1200px;
   height: 590px;
   background-image: url(../img/map.png);
   background-repeat: no-repeat;
@@ -608,11 +601,13 @@ footer {
   display: flex;
   width: 46px;
   height: 48px;
-  -ms-flex-pack: distribute;
-  justify-content: space-around;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center
+}
+
+.social-button svg {
+  margin: 0 auto
 }
 
 .facebook-social,.twiter-social {
@@ -631,11 +626,11 @@ footer {
   fill: #fff
 }
 
-.svg-social:focus path,.svg-social:hover path,a.social-button:focus path,a.social-button:hover path {
+.social-button:focus path,.social-button:hover path,.svg-social:focus path,.svg-social:hover path {
   fill: #fff
 }
 
-.svg-social:active path,a.social-button:active path {
+.social-button:active path,.svg-social:active path {
   fill: #88b6d1
 }
 
@@ -710,13 +705,7 @@ footer {
   line-height: 21px
 }
 
-.checkbox-filter:last-child input[type=checkbox]+.checkbox-indicator::before {
-  position: absolute;
-  top: -3px;
-  left: 0
-}
-
-.checkbox-filter:last-child input[type=checkbox]:checked+.checkbox-indicator::before {
+.checkbox-filter:last-child input[type=checkbox]+.login-checkbox::before {
   position: absolute;
   top: -3px;
   left: 0
@@ -736,8 +725,8 @@ footer {
   cursor: pointer
 }
 
-.login-checkbox input[type=checkbox]+.checkbox-indicator::before {
-  content: "";
+input[type=checkbox]+.login-checkbox::before {
+  content: '';
   position: absolute;
   top: -2px;
   left: 0;
@@ -747,20 +736,37 @@ footer {
   background-repeat: no-repeat
 }
 
-.login-checkbox input[type=checkbox disabled]+path {
-  fill: #6a6a6a
+input[type=checkbox]:checked+.login-checkbox::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: 0;
+  width: 27px;
+  height: 23px;
+  background-image: url(../img/svg/checkbox-on.svg);
+  background-repeat: no-repeat
+}
+
+input[type=checkbox]:disabled+.login-checkbox::before {
+  fill: #6a6a6a;
+  background-image: url(../img/svg/checkbox-disabled-off.svg)
+}
+
+input[type=checkbox]:checked:disabled+.login-checkbox::before {
+  fill: #6a6a6a;
+  background-image: url(../img/svg/checkbox-disabled-on.svg)
 }
 
 .filter-range {
-  width: 318px;
+  width: 317px;
   margin-left: auto;
-  margin-right: 6%;
+  padding-right: 6%;
   color: #fff;
   text-transform: uppercase
 }
 
 .filter-range-title {
-  margin-bottom: 9px;
+  margin-bottom: 10px;
   font-weight: 600;
   font-size: 16px;
   line-height: 21px
@@ -768,11 +774,11 @@ footer {
 
 .price-controls {
   position: relative;
-  height: 36px;
-  margin-bottom: 19px;
+  margin-bottom: 20px;
+  padding: 4px 0 2px 64px;
+  font-size: 0;
   border: 2px solid #fff;
-  border-radius: 2px;
-  font-size: 0
+  border-radius: 2px
 }
 
 .price-controls::after {
@@ -791,14 +797,17 @@ footer {
 .price-controls label {
   display: inline-block;
   font-size: 14px;
-  line-height: 38px;
+  line-height: 21px;
   vertical-align: top;
   cursor: pointer
 }
 
 .price-controls .max-price,.price-controls .min-price {
-  width: 90px;
-  padding-left: 61px
+  width: 90px
+}
+
+.price-controls .max-price {
+  margin-left: 57px
 }
 
 .price-controls input {
@@ -853,8 +862,9 @@ footer {
 
 .btn-transparent {
   display: block;
-  margin: 0 auto;
-  padding: 6px 31px;
+  margin: 0 94px 0 auto;
+  padding: 6px 34px;
+  font-family: inherit;
   font-size: 14px;
   line-height: 20px;
   color: #fff;
@@ -911,9 +921,8 @@ footer {
 }
 
 .sorting-item-pasive a {
-  border-bottom: 1px dashed #81b3d2;
-  color: #d1d1d1;
-  font-family: inherit
+  border-bottom: 1px dotted #81b3d2;
+  color: #d1d1d1
 }
 
 .sorting-item-pasive a:active {
@@ -942,26 +951,26 @@ footer {
   margin-right: 12px
 }
 
-a.direction-link {
+.direction-link {
   display: block;
   width: 11px;
   height: 10px;
   line-height: 11px
 }
 
-.direction-link svg path {
+.direction-link path {
   fill: #cacaca
 }
 
-.direction-link:hover svg path {
+.direction-link:hover path {
   fill: #231f20
 }
 
-.direction-link:active svg path {
+.direction-link-active path,.direction-link-active:active path,.direction-link-active:hover path,.direction-link:active path {
   fill: #81b3d2
 }
 
-ul.catalog-list {
+.catalog-list {
   margin: 0;
   padding: 0
 }
