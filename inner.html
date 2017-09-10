@@ -3,9 +3,9 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
     <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
   </head>
   <body>
     <div class="container">
@@ -13,7 +13,7 @@
         <nav class="main-navigation">
           <a class="main-header-logo" href="index.html">
             <img src="img/logo.png" width="138" height="70" alt="Седона">
-          </a>            <!--Размеры, текст-->
+          </a>
           <ul class="list">
             <li class="header-list-item">
               <a href="#">Информация</a>
@@ -35,59 +35,59 @@
       <main>
         <section class="filters">
           <h2 class="visually-hidden">Фильтр жилья</h2>
-          <form action="" method="post">
+          <form action="get" method="post">
             <div class="filters-flex">
               <div class="checkbox-field checkbox-field-first">
                 <p class="option-header">Инфраструктура:</p>
                 <div class="checkbox-filter">
-                  <input type="checkbox" name="pool" id="pool-field" checked>
-                  <span class="checkbox-indicator"></span>
-                  <label class="login-checkbox" for="pool-field">Бассейн</label>
+                  <input class="visually-hidden" type="checkbox" id="pool" name="pool" checked>
+                  <label class="login-checkbox" for="pool">Бассейн</label>
                 </div>
                 <div class="checkbox-filter">
-                  <input type="checkbox" name="parking" id="parking-field">
-                  <label for="parking-field">Парковка</label>
+                  <input class="visually-hidden" type="checkbox" name="parking" id="parking-field">
+                  <label class="login-checkbox" for="parking-field">Парковка</label>
                 </div>
                 <div class="checkbox-filter">
-                  <input type="checkbox" name="wi-fi" id="wifi-field">
-                  <label for="wifi-field">Wi-fi</label>
+                  <input class="visually-hidden" type="checkbox" name="wi-fi" id="wifi-field">
+                  <label class="login-checkbox" for="wifi-field">Wi-fi</label>
                 </div>
               </div>
 
               <div class="checkbox-field">
                 <p class="option-header">Тип жилья:</p>
                 <div class="checkbox-filter">
-                  <input type="checkbox" name="hotel" id="hotel-field" checked>
-                  <label for="hotel-field">Гостиница</label>
+                  <input class="visually-hidden" type="checkbox" name="hotel" id="hotel-field" checked>
+                  <label class="login-checkbox" for="hotel-field">Гостиница</label>
                 </div>
                 <div class="checkbox-filter">
-                  <input type="checkbox" name="motel" id="motel-field" checked>
-                  <label for="motel-field">Мотель</label>
+                  <input class="visually-hidden" type="checkbox" name="motel" id="motel-field" checked>
+                  <label class="login-checkbox" for="motel-field">Мотель</label>
                 </div>
                 <div class="checkbox-filter">
-                  <input type="checkbox" name="apartments" id="apartments-field" checked>
-                  <label for="apartments-field">Апартаменты</label>
+                  <input class="visually-hidden" type="checkbox" name="apartments" id="apartments-field" checked>
+                  <label class="login-checkbox" for="apartments-field">Апартаменты</label>
                 </div>
               </div>
 
-              <div class="cost-field">
-                <p class="option-header">Стоимость в сутки (Р):</p>
-                <div class="range">
-                  <div>
-                    <label for="">От</label>
-                    <input type="text" name="" value="" id="">
-                  </div>
-                  <div>
-                    <label for="">До</label>
-                    <input type="text" name="" value="" id="">
-                  </div>
+              <div class="filter-range">
+                <div class="filter-range-title">Стоимость в сутки (р):</div>
+                <div class="price-controls">
+                  <label class="min-price">от <input type="text" name="min-price" value="0"></label>
+                  <label class="max-price">до <input type="text" name="max-price" value="3000"></label>
                 </div>
-                <input class="button show-button" type="submit" value="Показать">
+                <div class="range-controls">
+                  <div class="scale">
+                    <div class="bar"></div>
+                  </div>
+                  <div class="range-toggle range-toggle-min"></div>
+                  <div class="range-toggle range-toggle-max"></div>
+                </div>
+                <button class="btn-transparent" type="submit">Показать</button>
               </div>
             </div>
           </form>
         </section>
-        <div class="settings">  <!-- --------- Есть вопросы ------- -->
+        <div class="settings">
           <div class="search-result">
             Найдено: 3
           </div>
@@ -114,7 +114,7 @@
                 </a>
               </li>
               <li class="direction-item">
-                <a class="direction-link direction-link-active" href="#">
+                <a class="direction-link direction-link-active">
                   <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10"><path fill="#231F20" d="M5.5 10L0 0h11"/></svg>
                   <b class="visually-hidden">Вниз</b>
                 </a>
