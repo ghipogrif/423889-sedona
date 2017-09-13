@@ -26,6 +26,37 @@ img {
   height: auto;
 }
 
+ /*-------   JAVASCRIPT ------*/
+ @keyframes bounce {
+   0% {
+     transform: translateY(-1000px);
+   }
+
+   70% {
+     transform: translateY(10px);
+   }
+
+   90% {
+     transform: translateY(-10px);
+   }
+
+   100% {
+     transform: translateY(0);
+   }
+ }
+
+.modal {
+ display: none;
+ }
+
+.modal-show {
+ display: block;
+ animation: bounce 0.6s;
+ }
+
+
+  /*-------   JAVASCRIPT ------*/
+
 .visually-hidden {
 	position: absolute;
 	overflow: hidden;
@@ -138,6 +169,7 @@ a.search-hotel-header:active {
   display: block;
   width: 1200px;
   height: 508px;
+  background-color: #ffffff;
   background-image: url(../img/background-index.jpg);
   background-repeat: no-repeat;
   background-position: 0px -56px;
@@ -178,6 +210,11 @@ a.search-hotel-header:active {
 .number-of-people,
 .advantage-item {
   display: flex;
+  flex-wrap: wrap;
+}
+
+.advantage-item {
+  background-color: #81b3d2;
 }
 
 .card-item {
@@ -272,6 +309,7 @@ b.card-number {
 
 .card-list {
   display: flex;
+  flex-wrap: wrap;
   margin: 0;
   padding: 47px 0px 59px;
   background-color: #eeeeee;
@@ -405,10 +443,10 @@ ul.sorting-list {
 
 .form-search {
   position: absolute;
+  z-index: 4;
   left: 316px;
   top: 291px;
   box-sizing: border-box;
-  display: block;
   width: 568px;
   padding: 55px;
   font-weight: bold;
@@ -424,12 +462,16 @@ ul.sorting-list {
   align-items: center;
 }
 
-.search-hotel-field:first-child {
+.search-hotel-field label {
+  margin-right: auto;
+}
+
+.search-hotel-field {
   margin-bottom: 29px;
 }
 
-.search-hotel-field label {
-  margin-right: auto;
+.search-hotel-field:first-child {
+  margin-bottom: 29px;
 }
 
 .search-hotel-field:nth-child(2) {
@@ -489,8 +531,13 @@ ul.sorting-list {
 .number-of-adults,
 .number-of-children {
   display: flex;
+  flex-wrap: wrap;
   margin: 0px;
   align-items: center;
+}
+
+.number-of-children {
+  margin-left: auto;
 }
 
 .number-of-adults input,
@@ -523,9 +570,6 @@ ul.sorting-list {
   color: #81b3d2;
 }
 
-.number-of-children {
-  margin-left: 53px;
-}
 
 .number-of-children label {
   margin-right: 27px;
@@ -697,14 +741,14 @@ footer {
   padding: 0;
   padding-top: 27px;
   padding-bottom: 31px;
+  color: #ffffff;
+  background-color: #438cb5;
   background-image: url(../img/filters-background.jpg);
   background-position: center -56px;
-
 }
 
-.filters-flex  {
+.filters-flex form {
   display: flex;
-  color: #ffffff;
 }
 
 .checkbox-field:nth-child(1) {
@@ -750,7 +794,7 @@ footer {
   margin-bottom: 25px;
 }
 
-.checkbox-filter:nth-child(4) {
+.checkbox-filter:last-child {
   margin-bottom: 0;
 }
 

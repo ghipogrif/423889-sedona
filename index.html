@@ -100,8 +100,8 @@
           <h2 class="interest-ask">Заинтересовались?</h2>
           <p class="search-hotel-text">Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения гостиниц в Седоне</p>
           <a class="search-hotel-header" href="#">Поиск гостиницы в Седоне</a>
-          <form action="get" method="post">
-            <div class="form-search">
+          <div class="form-search modal">
+            <form action="get" method="post">
               <p class="search-hotel-field">
                 <label class="date" for="arrival">Дата заезда:</label>                          <!--Правильно?-->
                 <input class="input-search-decoration" type="text" name="arrival-date" id="arrival" value="24 Апреля 2017">
@@ -120,12 +120,12 @@
                 <p class="number-of-adults">
                   <label for="quantity-of-adults">Взрослые:</label>
                   <button class="button button-step" type="button" value="-">&#8722;</button>
-                  <input  class="input-search-decoration" id="quantity-of-adults" type="text" name="adults" value="2">
+                  <input  class="text input-search-decoration" id="quantity-of-adults" type="text" name="adults" value="2">
                   <button class="button button-step" type="button" value="+">&#43;</button>
                 </p>
                 <p class="number-of-children">
                   <label for="quantity-of-children">Дети:</label>
-                  <button class="button button-step" type="button" value="-">&#8722;</button>
+                  <button class="button button-step minus" type="button" value="-">&#8722;</button>
                   <input  class="input-search-decoration" id="quantity-of-children" type="text" name="children" value="0">
                   <button class="button button-step" type="button" value="+">&#43;</button>
                 </p>
@@ -133,10 +133,12 @@
               <p class="button search-button">
                 <input type="submit" value="Найти">
               </p>
-            </div>
-          </form>
+            </form>
+          </div>
         </section>
-        <div class="map"></div>
+        <div class="map">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d498246.62153101!2d-111.66992747625845!3d34.87550011011018!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2sru!4v1505227423865" width="1200" height="473" frameborder="0" style="border:0" allowfullscreen></iframe>
+        </div>
       </main>
 
       <footer class="footer-index">
@@ -172,6 +174,7 @@
           </a>
         </div>
       </footer>
+      <script src="js/script-min.js"></script>
     </div>
   </body>
 </html>
