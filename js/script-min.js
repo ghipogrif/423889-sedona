@@ -1,0 +1,1 @@
+var link=document.querySelector(".search-hotel-header"),popup=document.querySelector(".form-search");link.addEventListener("click",function(a){a.preventDefault();popup.classList.toggle("modal-show")});
